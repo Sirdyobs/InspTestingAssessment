@@ -26,7 +26,7 @@ public class GeneralUtility {
 	public Object[][] getTestData(String filename) {
 		XSSFWorkbook workbook = null;
 		Sheet sheet;
-		String testDataPath = System.getProperty("user.dir") + "\\src\\main\\java\\TestData\\";
+		String testDataPath = System.getProperty("user.dir") + "//src//main//java//TestData//";
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(testDataPath + filename);
@@ -57,7 +57,7 @@ public class GeneralUtility {
 		Iterator entriesIterator = null;
 		try {
 			JSONObject contentObj = (JSONObject) parser.parse(new FileReader(
-					new File(System.getProperty("user.dir") + "\\src\\main\\java\\TestData\\" + filename)));
+					new File(System.getProperty("user.dir") + "//src//main//java//TestData//" + filename)));
 			JSONObject dataObj = (JSONObject) contentObj.get("Transaction");
 			dataObj.keySet().forEach(key -> {
 				dataMap.put(String.valueOf(key), (JSONObject) dataObj.get(key));

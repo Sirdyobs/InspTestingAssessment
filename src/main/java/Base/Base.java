@@ -29,7 +29,7 @@ public abstract class Base {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir") + "\\src\\main\\java\\Config\\config");
+					System.getProperty("user.dir") + "//src//main//java//Config//config");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
